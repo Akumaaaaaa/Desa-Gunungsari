@@ -49,6 +49,22 @@ infoCards.forEach(card => {
     infoCardObserver.observe(card);
 });
 
+let textContent = "Desa Gunungsari";
+let index = 0;
+let speed = 100;
+
+function typeEffect() {
+    if (index < textContent.length) {
+        text.innerHTML += textContent.charAt(index);
+        index++;
+        setTimeout(typeEffect, speed);
+    }
+}
+
+window.addEventListener('load', () => {
+    typeEffect();
+});
+
 window.addEventListener('scroll', () => {
   let value = window.scrollY;
 
@@ -63,5 +79,16 @@ window.addEventListener('scroll', () => {
 });
 
 function redirectToWhatsApp() {
-    window.location.href = "https://api.whatsapp.com/send?phone=628127004921&text=Halo%20saya%20mau%20tanya%20tentang%20Gunungsari";
+    window.location.href = "https://api.whatsapp.com/send?phone=6282136686986&text=Assalamu'alaikum,%20saya%20mau%20tanya%20tentang%20Desa%20Gunungsari";
 }
+
+function toggleMobileMenu() {
+  const mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenu.classList.toggle('show-mobile-menu');
+}
+
+document.querySelectorAll('.mobile-menu a').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelector('.mobile-menu').classList.remove('show-mobile-menu');
+  });
+});

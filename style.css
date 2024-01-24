@@ -106,6 +106,80 @@ header{
     opacity: 0;
 }
 
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #eaf8ef; 
+    color: #ffffff; 
+    padding: 50px; 
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #359381;
+}
+
+details {
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #359381;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+summary {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+summary::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #359381;
+    transform: translateX(-50%);
+    transition: width 0.5s ease-out, transform 0.5s ease-out;
+}
+
+details p {
+    font-size: 1em;
+    margin-top: 5px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+details[open] {
+    background-color: #003329;
+    color: #ffffff;
+}
+
+details[open] summary {
+    color: #ffffff;
+}
+
+details[open] summary::after {
+    animation: openArrow 0.5s ease-out;
+}
+
+details[open] p {
+    color: #ffffff;
+    animation: slideDown 0.3s ease;
+}
+
 #leaf{
     position: absolute;
     width: 30%;
@@ -172,49 +246,6 @@ header{
     margin: 10px 0;
 }
 
-.social-media-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.social-media-card {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #359381;
-}
-
-.embedded-post {
-    margin-bottom: 20px;
-}
-
-.embedded-post p {
-    margin: 0;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
-}
-
 .lembaga-section {
     padding: 50px;
     text-align: center;
@@ -265,7 +296,7 @@ header{
     text-align: center;
     color: #333;
     opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .kontak-section h2 {
@@ -279,8 +310,9 @@ header{
     margin-bottom: 15px;
 }
 
-.kontak-body, 
-.galeri-body {
+.kontak-body,
+.struktur-body,
+.galeri-body{
     overflow: hidden;
 }
 
@@ -337,7 +369,8 @@ img.hill-image {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding: 120px;
+    padding: 120px 120px 0px 120px;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .gallery-row {
@@ -398,48 +431,13 @@ img.hill-image {
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-
-.additional-cards {
-    display: flex;
-    align-items: center;
-}
-
-.additional-card {
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
-    width: 250px;
+    padding: 40px 20px;
     text-align: center;
-    transform: scale(0.8);
-    transition: transform 0.7s ease-out;
+    flex-wrap: wrap; 
 }
 
 .additional-card.card-popup {
     transform: scale(1);
-}
-
-.additional-card h2 {
-    color: #359381;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.additional-card p {
-    font-size: 1em;
-    color: #359381;
-    font-weight: 300;
-    text-align: justify;
-}
-
-.left-cards {
-    margin-right: auto; 
-}
-
-.right-cards {
-    margin-left: auto; 
 }
 
 .social-media-card {
@@ -486,17 +484,10 @@ img.hill-image {
     transform: scale(1.2);
 }
 
-.social-media-section {
-    display: flex;
-    justify-content: center; 
-    flex-wrap: wrap; 
-}
-
 .social-to-follow {
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
-    animation-delay: 0.5s;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .social-to-follow p {
@@ -521,6 +512,8 @@ img.hill-image {
     border-radius: 8px;
     width: 250px; 
     text-align: center;
+    transform: scale(0.8);
+    transition: transform 0.7s ease-out;
 }
 
 .additional-card:hover {
@@ -529,67 +522,28 @@ img.hill-image {
 
 .additional-card h2 {
     color: #359381;
-    font-size: 1.5em;
+    font-size: 1em;
     margin-bottom: 10px;
 }
 
 .additional-card p {
-    font-size: 1em;
+    font-size: 0.8em;
     color: #359381;
     font-weight: 300;
-    text-align: justify;
-}
-
-.left-cards{
-    margin-right: 100px;
-}
-
-.right-cards{
-    margin-left: 100px;
-}
-
-.social-media-card {
-    max-width: 600px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #359381;
     text-align: center;
 }
 
-.embedded-post {
-    margin-bottom: 20px;
+.left-cards{
+    margin-left: 80px;
 }
 
-.embedded-post p {
-    margin: 0;
-}
-
-.social-icons {
-    margin-top: 20px;
-}
-
-.social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icons img:hover {
-    transform: scale(1.2);
+.right-cards{
+    margin-right: 80px;
 }
 
 .selengkapnya-section {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 70px;
 }
 
 .selengkapnya-section a {
@@ -615,6 +569,7 @@ img.hill-image {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .level {
@@ -628,15 +583,18 @@ img.hill-image {
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    width: 150px;
+    width: 160px;
     text-align: center;
+    font-size: 10px;
 }
 
 .content-title {
     margin-top: 100px;
+    margin-bottom: 30px;
     text-align: center;
     font-size: 2em;
     color: #359381;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 footer {
@@ -654,6 +612,225 @@ footer {
     margin: 0 auto;
 }
 
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #359381;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #f9f9f9;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: #359381;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.show-mobile-menu {
+    display: flex;
+}
+
+.sekdes{
+    margin-left: 906px;
+}
+
+.bpd{
+    margin-left: -250px;
+}
+
+.kasi-pelayanan{
+    margin-right: 370px; 
+    padding-top: 30px;
+}
+
+.kadus{
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    header {
+        padding: 15px 10px; 
+    }
+
+    .logo-home {
+        margin: 5px; 
+        width: 25px; 
+    }
+
+    .kontak-section {
+        max-width: 90%;
+        margin: 80px auto;
+        padding: 15px;
+    }
+
+    .kontak-section h2 {
+        font-size: 2em; 
+    }
+
+    .kontak-section p {
+        font-size: 0.9em;
+    }
+
+    .whatsapp-button {
+        font-size: 0.9em;
+    }
+
+    .hill-image {
+        height: 50%;
+    }
+
+    .homepage {
+        height: auto;
+        padding: 60px 10px;
+    }
+
+    #homepage-text{
+        font-size: 45px;
+    }
+
+    #leaf,
+    #hill1,
+    #hill4,
+    #hill5,
+    #tree,
+    #plant,
+    #banana {
+        display: none;
+    }
+
+    .sec {
+        padding: 60px 50px;
+    }
+
+    .lembaga-logos {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0; 
+    }
+
+    .lembaga-item {
+        margin: 0 10px;
+    }
+    
+    .lembaga-item img {
+        height: 60px;
+        margin-bottom: 5px;
+    }
+
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+    }
+
+    .info-card,
+    .info-card.in-view {
+        width: 90%;
+    }
+
+    .info-card h2 {
+        font-size: 1.2em;
+    }
+
+    .info-card iframe {
+        width: 100%;
+    }
+
+    .right-cards, .left-cards{
+        margin: 0px;
+    }
+
+    .header-home{
+        justify-content: space-between;
+    }
+    
+    .galeri-section {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .gallery-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    .selengkapnya-section {
+        text-align: center;
+    }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .galeri-body, 
+    .struktur-body{
+        overflow-y: auto;
+    }
+
+    .level {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    .kadus{
+        margin-top: -5px;
+    }
+
+    .sibedil{
+        margin-bottom: 60px;
+    }
+    
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -662,5 +839,27 @@ footer {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 500px;
+        opacity: 1;
+    }
+}
+
+@keyframes openArrow {
+    0% {
+        width: 0;
+        transform: translateX(-50%);
+    }
+    100% {
+        width: 100%;
+        transform: translateX(-50%);
     }
 }

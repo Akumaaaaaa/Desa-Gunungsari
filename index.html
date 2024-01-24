@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Kabupaten Pemalang - Desa Gunungsari</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/pemalang.png">
@@ -20,6 +20,19 @@
             <a href="struktur.html">Struktur</a>
             <a href="kontak.html">Kontak</a>
         </nav>
+
+        <button class="hamburger-menu" onclick="toggleMobileMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        
+        <div class="mobile-menu">
+            <a href="index.html">Beranda</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="struktur.html">Struktur</a>
+            <a href="kontak.html" class="active">Kontak</a>
+        </div>
     </header>
 
     <section class="homepage">
@@ -31,14 +44,14 @@
         <img src="images/tree.png" id="tree">
         <img src="images/leaf.png" id="leaf">
         <img src="images/banana.png" id="banana">
-        <h2 id="homepage-text">Desa Gunungsari</h2>
+        <h2 id="homepage-text"></h2>
         <img src="images/plant.png" id="plant">
     </section>
 
     <section class="sec">
         <h2>Deskripsi Desa</h2>
         <p>
-            Desa Gunungsari, yang terletak di Kecamatan Pulosari, Kabupaten Pemalang, memiliki karakteristik yang unik dan menarik untuk dikaji dalam konteks KKN. Desa ini memiliki luas wilayah sekitar 5,2 kilometer persegi, dengan topografi yang sebagian besar didominasi oleh perbukitan dan lahan pertanian yang subur. Keindahan alamnya memberikan kesan damai dan menenangkan, menciptakan lingkungan yang cocok untuk berbagai kegiatan pembangunan dan pemberdayaan masyarakat.
+            Desa Gunungsari, yang terletak di Kecamatan Pulosari, Kabupaten Pemalang, memiliki karakteristik yang unik dan menarik. Desa ini memiliki luas wilayah sekitar 5,2 kilometer persegi, dengan topografi yang sebagian besar didominasi oleh perbukitan dan lahan pertanian yang subur. Keindahan alamnya memberikan kesan damai dan menenangkan, menciptakan lingkungan yang cocok untuk berbagai kegiatan pembangunan dan pemberdayaan masyarakat.
             <br><br>
             Penduduk Desa Gunungsari sebagian besar menggantungkan hidup dari sektor pertanian, dengan lahan pertanian yang luas di sekitar desa. Sawah-sawah hijau yang terbentang memberikan pemandangan yang memukau, mencerminkan kekayaan potensi pertanian desa ini. Selain itu, keberagaman budaya juga menjadi kekuatan masyarakat Gunungsari. Tradisi-tradisi lokal yang diwariskan dari generasi ke generasi menjadi bagian integral dari kehidupan sehari-hari penduduk, menciptakan identitas dan keharmonisan di dalam komunitas.
             <br><br>
@@ -50,16 +63,16 @@
         <div class="info-card">
             <h2>Informasi Desa</h2>
             <hr class="line">
-            <p>Jumlah Penduduk: <span>[]</span></p>
-            <p>Luas Desa: <span>[]</span></p>
+            <p>Jumlah Penduduk: <span>±4.482 Jiwa</span></p>
+            <p>Luas Desa: <span>±10.002 Hektar</span></p>
             <hr class="line">
-            <p>Negara: <span>[]</span></p>
-            <p>Provinsi: <span>[]</span></p>
-            <p>Kabupaten: <span>[]</span></p>
-            <p>Kecamatan: <span>[]</span></p>
-            <p>Titik Koordinat: <span>[]</span></p>
-            <p>Alamat: <span>[]</span></p>
-            <p>Mata Pencaharian: <span>[]</span></p>
+            <p>Negara: <span>Indonesia</span></p>
+            <p>Provinsi: <span>Jawa Tengah</span></p>
+            <p>Kabupaten: <span>Pemalang</span></p>
+            <p>Kecamatan: <span>Pulosari</span></p>
+            <p>Titik Koordinat: <span>-7.174221725494457, 109.21867570259194</span></p>
+            <p>Alamat: <span>Jalan Simpang 3 No.1, Gunungsari</span></p>
+            <p>Mata Pencaharian: <span>Perkebunan & Pertanian</span></p>
         </div>
         <div class="info-card">
             <h2>Location Map</h2>
@@ -70,32 +83,32 @@
     <section class="social-media-section" style="background-color: #EAF8EF;">
         <div class="additional-cards left-cards">
             <div class="additional-card">
-                <h2>Card 1</h2>
-                <p>Konten 1</p>
+                <h2>Profil Desa</h2>
+                <p>Mengetahui lebih lanjut tentang sejarah dan profil Desa Gunungsari.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 2</h2>
-                <p>Konten 2...</p>
+                <h2>Agenda Acara</h2>
+                <p>Ikuti berbagai kegiatan dan acara menarik di Desa Gunungsari.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 3</h2>
-                <p>Konten 3...</p>
+                <h2>Potret Desa</h2>
+                <p>Lihat galeri foto yang menampilkan keindahan alam dan kegiatan masyarakat.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 4</h2>
-                <p>Konten 4...</p>
+                <h2>Artikel Terkini</h2>
+                <p>Baca artikel terbaru tentang perkembangan terkini di Desa Gunungsari.</p>
             </div>
         </div>
 
         <div class="social-media-card">
             <div class="embedded-post">
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">New team! New chapter! <a href="https://twitter.com/hashtag/LETSGOLIQUID?src=hash&amp;ref_src=twsrc%5Etfw">#LETSGOLIQUID</a> <a href="https://twitter.com/hashtag/nAts?src=hash&amp;ref_src=twsrc%5Etfw">#nAts</a> <a href="https://twitter.com/hashtag/TeamLiquid?src=hash&amp;ref_src=twsrc%5Etfw">#TeamLiquid</a> <a href="https://twitter.com/hashtag/LiquidValorant?src=hash&amp;ref_src=twsrc%5Etfw">#LiquidValorant</a> <a href="https://t.co/engYCZucDR">pic.twitter.com/engYCZucDR</a></p>&mdash; Liquid nAts (@nAts__ss) <a href="https://twitter.com/nAts__ss/status/1720819145229373581?ref_src=twsrc%5Etfw">November 4, 2023</a></blockquote>
+                <blockquote class="twitter-tweet"><p lang="in" dir="ltr">Selamat datang di akun resmi Desa Gunungsari! <a href="https://twitter.com/hashtag/Pulosari?src=hash&amp;ref_src=twsrc%5Etfw">#Pulosari</a><a href="https://twitter.com/hashtag/Gunungsari?src=hash&amp;ref_src=twsrc%5Etfw">#Gunungsari</a> <a href="https://t.co/JKvH0eWRJf">pic.twitter.com/JKvH0eWRJf</a></p>&mdash; Desa Gunungsari (@dsa_gunungsari) <a href="https://twitter.com/dsa_gunungsari/status/1750039385842884870?ref_src=twsrc%5Etfw">January 24, 2024</a></blockquote>
                 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
     
             <p>Follow us for more updates:</p>
             <div class="social-icons">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/dsa_gunungsari" target="_blank" rel="noopener noreferrer">
                     <box-icon name='twitter' type='logo' color='#359381'></box-icon>
                 </a>
             </div>
@@ -104,20 +117,20 @@
 
         <div class="additional-cards right-cards">
             <div class="additional-card">
-                <h2>Card 4</h2>
-                <p>Konten 4...</p>
+                <h2>Tradisi Lokal</h2>
+                <p>Temukan keberagaman budaya Desa Gunungsari melalui tradisi-tradisi lokal yang unik.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 5</h2>
-                <p>Konten 5...</p>
+                <h2>Program Pemberdayaan</h2>
+                <p>Ikuti program pemberdayaan masyarakat dan pelatihan di Desa Gunungsari.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 6</h2>
-                <p>Konten 6...</p>
+                <h2>Ekonomi Lokal</h2>
+                <p>Kenali berbagai potensi ekonomi lokal Desa Gunungsari.</p>
             </div>
             <div class="additional-card">
-                <h2>Card 7</h2>
-                <p>Konten 7...</p>
+                <h2>Pariwisata Desa</h2>
+                <p>Jelajahi destinasi pariwisata menarik di Desa Gunungsari.</p>
             </div>
         </div>
     </section> 
@@ -134,7 +147,26 @@
             <div class="lembaga-item">
                 <img src="images/kemedesa.png" alt="Kemedesa Logo">
             </div>
+            <div class="lembaga-item">
+                <img src="images/puspindes.png" alt="Puspindes Logo">
+            </div>
+            <div class="lembaga-item">
+                <img src="images/sidekem.png" alt="Sidekem Logo">
+            </div>
         </div>
+    </section>
+
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <details>
+            <summary>Berapa jumlah dusun di desa Gunungsari?</summary>
+            <p>Jumlah dusun di desa Gunungsari ada 4, yaitu dusun Krajan, dusun Silegok, dusun Sipendil, dan dusun Sibedil.</p>
+        </details>
+        
+        <details>
+            <summary>UMKM apa saja yang ada di desa Gunungsari?</summary>
+            <p>Kopi Gurilang, Teh Ligar, Lestari Snack, Barokah, Teh Tarik & Jahe Instan, Basreng, Mangleng, Galen Jaya, Az Zahra, dan lain-lain.</p>
+        </details>
     </section>
 
     <footer>
