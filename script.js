@@ -11,13 +11,9 @@ let infoCards = document.querySelectorAll('.info-card');
 
 let observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      sec.classList.add('in-view');
-    } else {
-      sec.classList.remove('in-view');
-    }
+    sec.classList.toggle('in-view', entry.isIntersecting);
   });
-}, { threshold: 0.5 });
+});
 
 observer.observe(sec);
 
