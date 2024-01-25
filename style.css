@@ -739,6 +739,7 @@ footer {
 
     .sec {
         padding: 60px 50px;
+        font-size: 12px;
     }
 
     .lembaga-logos {
@@ -769,6 +770,10 @@ footer {
 
     .info-card h2 {
         font-size: 1.2em;
+    }
+
+    .info-card p {
+        font-size: 12px;
     }
 
     .info-card iframe {
